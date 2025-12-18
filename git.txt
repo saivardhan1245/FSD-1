@@ -1,0 +1,55 @@
+✅ SCENARIO
+
+You created a local project folder
+
+You created a GitHub repository
+
+Now you want to connect and push code
+
+🔥 CORRECT SEQUENCE (FOLLOW EXACTLY)
+1️⃣ Open VS Code inside your project folder
+cd path/to/your/project
+
+2️⃣ Initialize git (only once)
+git init
+
+3️⃣ Check current branch
+git branch
+
+
+If branch is master, rename to main:
+
+git branch -M main
+
+4️⃣ Add remote repository
+git remote add origin https://github.com/<username>/<repo-name>.git
+
+
+Verify:
+
+git remote -v
+
+5️⃣ Stage all files
+git add .
+
+6️⃣ First commit
+git commit -m "Initial commit"
+
+7️⃣ VERY IMPORTANT (only first push)
+git pull origin main --allow-unrelated-histories
+
+
+If editor opens → Save & Close
+
+If conflict → resolve → git add . → git commit
+
+8️⃣ Push to GitHub
+git push -u origin main
+
+🔁 AFTER THIS (NORMAL DAILY FLOW)
+
+Whenever you make changes:
+
+git add .
+git commit -m "Your message"
+git push
